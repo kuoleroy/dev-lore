@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "6f47ee282ffb5ff5",
+    "type": "split",
+    "children": [
+      {
+        "id": "769cb0091593891b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dad099bcda854fc4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "史藏/正史/史记_reading.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "史记_reading"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cbdb23721205b19b",
+    "type": "split",
+    "children": [
+      {
+        "id": "19c29d30eb313d44",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b63a571b2f8ccd3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "b45b17e90a922108",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 313.5
+  },
+  "right": {
+    "id": "0e13768327c262f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a15ad89bead4ea1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c3668e88bc68539",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "史藏/正史/史记_reading.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "command-palette:打开命令面板": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "bases:新建数据库": false,
+      "graph:查看关系图谱": false
+    }
+  },
+  "active": "dad099bcda854fc4",
+  "lastOpenFiles": [
+    "未命名.canvas",
+    "史藏/正史/史记_reading.md",
+    "史藏/正史/史记.md",
+    "LearnProject/JavaScript-master/第01章 基础知识.md",
+    "LearnProject/JavaScript-full-course-main/API/markdown.md",
+    "revolution/马恩全集_目录.md",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/08降妖.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/07无极天渊.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/06网.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/05面具.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/04狼云传.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/03红杀.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/02丐王.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集/01都市游侠.txt",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/谢天武侠全集",
+    "Book/玄幻小说txt合集/玄幻/武侠玄幻05/武林樵子/龙翔凤鸣.txt",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第029页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第028页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第027页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第026页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第025页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第024页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第022页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第023页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第021页.png",
+    "Book/革命作品/革命研究/文革回忆录/《七五宪法》_图片/第020页.png",
+    "revolution/马恩全集_目录.txt.md",
+    "learn-project/zh.javascript.info-master/1-js/03-code-quality/04-ninja-code/article.md",
+    "learn-project/zh.javascript.info-master/1-js/03-code-quality/03-comments/article.md",
+    "learn-project/zh.javascript.info-master/1-js/03-code-quality/02-coding-style/article.md",
+    "learn-project/zh.javascript.info-master/1-js/03-code-quality/02-coding-style/1-style-errors/task.md",
+    "learn-project/zh.javascript.info-master/1-js/03-code-quality/02-coding-style/1-style-errors/solution.md",
+    "learn-project/zh.javascript.info-master/1-js/03-code-quality/01-debugging-chrome/article.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/17-arrow-functions-basics/1-rewrite-arrow/task.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/17-arrow-functions-basics/1-rewrite-arrow/solution.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/18-javascript-specials/article.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/article.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/3-uppercast-constant/task.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/3-uppercast-constant/solution.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/2-declare-variables/task.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/2-declare-variables/solution.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/1-hello-variables/task.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/04-variables/1-hello-variables/solution.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/03-strict-mode/article.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/02-structure/article.md",
+    "learn-project/zh.javascript.info-master/1-js/02-first-steps/01-hello-world/2-hello-alert-ext/task.md"
+  ]
+}

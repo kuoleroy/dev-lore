@@ -1,0 +1,13 @@
+/* 阅读模式正文 */
+.markdown-preview-view {
+  font-family: "LXGW WenKai", "Noto Serif SC", "SimSun", serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 阅读模式标题 */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3 {
+  font-family: "LXGW WenKai", "Noto Serif SC", serif;
+}

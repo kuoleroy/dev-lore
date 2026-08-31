@@ -1,0 +1,4 @@
+# 不忽略 .obsidian，必要时忽略缓存/临时
+.trash/
+*.log
+.DS_Store

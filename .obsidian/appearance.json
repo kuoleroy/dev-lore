@@ -1,0 +1,13 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "Dracula for Obsidian",
+  "interfaceFontFamily": "霞鹜文楷",
+  "textFontFamily": "霞鹜文楷",
+  "monospaceFontFamily": "霞鹜文楷等宽",
+  "baseFontSizeAction": true,
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "reading-font"
+  ],
+  "baseFontSize": 20
+}

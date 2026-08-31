@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "markdown: lint (markdownlint-cli2)",
+      "type": "shell",
+      "command": "npx markdownlint-cli2 \"**/*.md\"",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "markdown: 检查失效链接",
+      "type": "shell",
+      "command": "npx markdown-link-check \"**/*.md\"",
+      "problemMatcher": []
+    }
+  ]
+}
