@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "go: build",
+      "type": "shell",
+      "command": "go build ./...",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$go"
+      ]
+    },
+    {
+      "label": "go: test",
+      "type": "shell",
+      "command": "go test ./...",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$go"
+      ]
+    },
+    {
+      "label": "go: vet",
+      "type": "shell",
+      "command": "go vet ./...",
+      "problemMatcher": [
+        "$go"
+      ]
+    },
+    {
+      "label": "go: run",
+      "type": "shell",
+      "command": "go run .",
+      "problemMatcher": []
+    },
+    {
+      "label": "go: 安装工具 (gopls + dlv + goimports)",
+      "type": "shell",
+      "command": "go install golang.org/x/tools/gopls@latest golang.org/x/tools/cmd/goimports@latest github.com/go-delve/delve/cmd/dlv@latest",
+      "problemMatcher": []
+    }
+  ]
+}

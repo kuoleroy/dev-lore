@@ -1,0 +1,78 @@
+{
+  // ────────────────────────────────────────────────────────────────
+  // ① 通用设置 · 取自 _base/settings.common.json（跨栈共享）
+  // ────────────────────────────────────────────────────────────────
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.venv": true,
+    "**/.cache": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/dist": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.venv": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.venv/**": true,
+    "**/.git/**": true,
+    "**/dist/**": true
+  },
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // ────────────────────────────────────────────────────────────────
+  // ② 微信小程序专属设置（均为新增项，无覆盖）
+  // ────────────────────────────────────────────────────────────────
+  // 格式化策略：JS/TS/JSON/MD → prettier；WXML → minapp-vscode 内置 prettier 规则；WXSS 暂不自动格式化
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "minapp-vscode.wxmlFormatter": "prettier",
+  "minapp-vscode.disableAutoConfig": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "json"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // 微信开发者工具 CLI 路径（tasks.json 用，Windows 默认安装路径；也可到「设置 → 安全设置 → 服务端口」离线目录里找 cli.bat）
+  "miniprogram.cliPath": "C:\\Program Files (x86)\\Tencent\\微信web开发者工具\\cli.bat"
+}

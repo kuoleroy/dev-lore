@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug React (Chrome, Vite)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "serverReadyAction": {
+        "pattern": "Local: http://localhost:([0-9]+)/",
+        "uriFormat": "http://localhost:%s/",
+        "action": "debugWithChrome"
+      }
+    },
+    {
+      "name": "Debug React (Chrome, CRA)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "serverReadyAction": {
+        "pattern": "Compiled successfully!|Starting the development server",
+        "uriFormat": "http://localhost:3000/",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}

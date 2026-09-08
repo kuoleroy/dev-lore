@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rust: Debug (LLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/target/debug/${input:binaryName}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "cargo: build"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "binaryName",
+      "type": "promptString",
+      "description": "Cargo.toml 中 package 名（= target/debug 下的二进制名）",
+      "default": "app"
+    }
+  ]
+}

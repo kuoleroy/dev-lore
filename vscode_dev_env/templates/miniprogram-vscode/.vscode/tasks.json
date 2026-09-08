@@ -1,0 +1,48 @@
+{
+  "//": "DevTools CLI 任务前提：微信开发者工具「设置 → 安全设置 → 开启服务端口」；cliPath 在 settings.json 的 miniprogram.cliPath 配置",
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "miniprogram: 打开项目 (DevTools CLI)",
+      "type": "shell",
+      "command": "\"${config:miniprogram.cliPath}\" open --project \"${workspaceFolder}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "miniprogram: 构建 npm (DevTools CLI)",
+      "type": "shell",
+      "command": "\"${config:miniprogram.cliPath}\" build-npm --project \"${workspaceFolder}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "miniprogram: 预览 (DevTools CLI)",
+      "type": "shell",
+      "command": "\"${config:miniprogram.cliPath}\" preview --project \"${workspaceFolder}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "miniprogram: 上传代码 (DevTools CLI)",
+      "type": "shell",
+      "command": "\"${config:miniprogram.cliPath}\" upload --project \"${workspaceFolder}\" --version 1.0.0 --desc \"auto upload\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "miniprogram: 单元测试 (jest)",
+      "type": "shell",
+      "command": "npm test -- --runInBand",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "label": "miniprogram: lint",
+      "problemMatcher": [
+        "$eslint-stylish"
+      ]
+    }
+  ]
+}

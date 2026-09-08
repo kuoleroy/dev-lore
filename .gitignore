@@ -1,4 +1,19 @@
-# 不忽略 .obsidian，必要时忽略缓存/临时
+# 垃圾/临时
 .trash/
 *.log
 .DS_Store
+
+# Obsidian
+.obsidian/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.idea/
+
+# 临时文件
+*.tmp
+*.bak

@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Vue (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "serverReadyAction": {
+        "pattern": "Local: http://localhost:([0-9]+)/",
+        "uriFormat": "http://localhost:%s/",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}
