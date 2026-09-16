@@ -1,501 +1,121 @@
-
 DisplayName                                                    DisplayVersion         Publisher
------------                                                    --------------         ---------                         
-彩读 3.7.2                                                     3.7.2                  kainanhong@gmail.com              
-DuMate 1.0.76                                                  1.0.76                 Baidu Qianfan                     
-Qoder 0.1.8                                                    0.1.8                  Qoder                             
-draw.io 26.2.15                                                26.2.15                JGraph                            
-massCode 5.10.0                                                5.10.0                 Anton Reshetov                    
-Upscayl 2.15.0                                                 2.15.0                 Nayam Amarshe                     
-Dawn Launcher 1.4.0                                            1.4.0                  FanChenIO                         
-ODE 多功能助手 0.6.0                                           0.6.0                                                    
-NVM for Windows 1.1.11                                         1.1.11                 Ecor Ventures LLC                 
-Cherry Studio                                                  1.8.1                  support@cherry-ai.com             
-DSH Desktop 0.7.2                                              0.7.2                  DataElement                       
-Karing                                                         1.2.25+2802            Supernova Nebula LLC              
-MarkText 0.17.1                                                0.17.1                 Jocs                              
-ShareX                                                         21.0.0                 ShareX Team                       
-bilidown 1.0.7                                                 1.0.7                  王子周棋洛                        
-WeMD 1.4.3                                                     1.4.3                  WeMD Team                         
-语雀 4.2.1                                                     4.2.1                  Yuque                             
-dev-sidecar 2.2.0                                              2.2.0                  Greper                            
-Bandizip Professional                                          7.36                   423Down                           
-Obsidian                                                       1.8.10                 Obsidian                          
-摹客 RP 2.0.6                                                  2.0.6                  Mockplus Technology Co.,Ltd.      
+-----------                                                    --------------         ---------
+彩读 3.7.2                                                     3.7.2                  kainanhong@gmail.com
+DuMate 1.0.76                                                  1.0.76                 Baidu Qianfan
+Qoder 0.1.8                                                    0.1.8                  Qoder
+draw.io 26.2.15                                                26.2.15                JGraph
+massCode 5.10.0                                                5.10.0                 Anton Reshetov
+Upscayl 2.15.0                                                 2.15.0                 Nayam Amarshe
+Dawn Launcher 1.4.0                                            1.4.0                  FanChenIO
+NVM for Windows 1.1.11                                         1.1.11                 Ecor Ventures LLC
+Cherry Studio                                                  1.8.1                  support@cherry-ai.com
+DSH Desktop 0.7.2                                              0.7.2                  DataElement
+Karing                                                         1.2.25+2802            Supernova Nebula LLC
+MarkText 0.17.1                                                0.17.1                 Jocs
+ShareX                                                         21.0.0                 ShareX Team
+bilidown 1.0.7                                                 1.0.7                  王子周棋洛
+WeMD 1.4.3                                                     1.4.3                  WeMD Team
+语雀 4.2.1                                                     4.2.1                  Yuque
+dev-sidecar 2.2.0                                              2.2.0                  Greper
+Bandizip Professional                                          7.36                   423Down
+Obsidian                                                       1.8.10                 Obsidian
+摹客 RP 2.0.6                                                  2.0.6                  Mockplus Technology Co.,Ltd.
 WorkBuddy 5.4.7                                                5.4.7                  Tencent Technology (Shenzhen) Com…
 Apipost 8.2.6                                                  8.2.6                  Beijing Arctic Fox Information Te…
-Fluent Reader 1.1.3                                            1.1.3                  Haoyuan Liu                       
+Fluent Reader 1.1.3                                            1.1.3                  Haoyuan Liu
 Pieces for Developers version 6.0.2                            6.0.2                  Mesh Intelligent Technologies, In…
-                                                                                                                        
-Apifox 2.8.39                                                  2.8.39                 Apifox Team                       
-AdsPower Global 6.12.6                                         6.12.6                 AdsPower                          
-Docker Desktop                                                 4.83.0                 Docker Inc.                       
-KXReader 1.0.9-1                                               1.0.9-1                科学文库                          
-Everything 1.4.1.1024 (x64)                                    1.4.1.1024             voidtools                         
-gamebox 1.2.0                                                  1.2.0                                                    
-Git                                                            2.42.0.2               The Git Development Community     
-HP LaserJet Professional P1100-P1560-P1600 Series                                                                       
-KiCad 10.0                                                     10.0.6                 KiCad                             
-LockHunter 3.4, 32/64 bit                                      3.4.3.146              Crystal Rich Ltd                  
-Mozilla Firefox (x64 zh-CN)                                    155.0.1                Mozilla                           
-Mozilla Maintenance Service                                    153.0.4                Mozilla                           
-                                                                                      Microsoft Corporation             
-Octop                                                          1.0.0                  Octop                             
-pgAgent_PG17 4.2.3                                             4.2.3-1                EnterpriseDB                      
-PikPak 2.15.0                                                  2.15.0                 PIKCLOUD PTE.LTD.                 
-PremiumSoft Navicat Premium 15.0                               15.0.12                PremiumSoft CyberTech Ltd.        
-QuickLook                                                      4.4.0                  QL-Win                            
-                                                                                      Microsoft Corporation             
-TencentDocs                                                    3.11.7                 腾讯科技(深圳)有限公司            
-腾讯会议                                                       3.44.10.457            腾讯科技(深圳)有限公司            
-                                                                                                                        
-WinPaste                                                       1.8.1                  winpaste                          
+Apifox 2.8.39                                                  2.8.39                 Apifox Team
+AdsPower Global 6.12.6                                         6.12.6                 AdsPower
+KXReader 1.0.9-1                                               1.0.9-1                科学文库
+Everything 1.4.1.1024 (x64)                                    1.4.1.1024             voidtools
+Git                                                            2.42.0.2               The Git Development Community
+KiCad 10.0                                                     10.0.6                 KiCad
+LockHunter 3.4, 32/64 bit                                      3.4.3.146              Crystal Rich Ltd
+Mozilla Firefox (x64 zh-CN)                                    155.0.1                Mozilla
+Mozilla Maintenance Service                                    153.0.4                Mozilla
+Octop                                                          1.0.0                  Octop
+pgAgent_PG17 4.2.3                                             4.2.3-1                EnterpriseDB
+PikPak 2.15.0                                                  2.15.0                 PIKCLOUD PTE.LTD.
+PremiumSoft Navicat Premium 15.0                               15.0.12                PremiumSoft CyberTech Ltd.
+QuickLook                                                      4.4.0                  QL-Win
+TencentDocs                                                    3.11.7                 腾讯科技(深圳)有限公司
+腾讯会议                                                       3.44.10.457            腾讯科技(深圳)有限公司
+WinPaste                                                       1.8.1                  winpaste
 Yuanbao                                                        2.85.0.619             Tencent Technology (Shenzhen) Co.…
-Zotero                                                         9.0.6                  Corporation for Digital Scholarsh…
-NVIDIA Nsight Systems 2022.4.2                                 22.4.2.1               NVIDIA Corporation                
-CMake                                                          3.29.0                 Kitware                           
-LocalSend 版本 1.17.0                                          1.17.0                 Tien Do Nam                       
-Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40664  12.0.40664             Microsoft Corporation             
-Python 3.12.10 Executables (64-bit)                            3.12.10150.0           Python Software Foundation        
-Python 3.12.10 Test Suite (64-bit)                             3.12.10150.0           Python Software Foundation        
-Microsoft ASP.NET Core 8.0.1 Targeting Pack (x64)              8.0.1.23580            Microsoft Corporation             
-Video2X Qt6 version 6.4.0                                      6.4.0                                                    
-Microsoft Visual C++ 2022 X64 Debug Runtime - 14.51.36247      14.51.36247            Microsoft Corporation             
-Microsoft ASP.NET Core 8.0.1 Shared Framework (x64)            8.0.1.23580            Microsoft Corporation             
-DiagnosticsHub_CollectionService                               18.5.37003             Microsoft Corporation             
-Microsoft.NET.Sdk.Maui.Manifest-8.0.100 (x64)                  8.0.3                  Microsoft Corporation             
-Application Verifier x64 External Package (DesktopEditions)    10.1.26100.8249        Microsoft                         
-Microsoft .NET Runtime - 8.0.1 (x64)                           64.4.5793              Microsoft Corporation             
-Python 3.12.10 Documentation (64-bit)                          3.12.10150.0           Python Software Foundation        
-Microsoft.NET.Sdk.iOS.Manifest-8.0.100 (x64)                   17.2.8004              Microsoft Corporation             
-Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219    10.0.40219             Microsoft Corporation             
-Qoder IDE                                                      1.106.3                Qoder                             
-Microsoft Update Health Tools                                  3.74.0.0               Microsoft Corporation             
-Microsoft .NET Targeting Pack - 8.0.1 (x64)                    64.4.5793              Microsoft Corporation             
-Python 3.13.4 Standard Library (64-bit)                        3.13.4150.0            Python Software Foundation        
-Aegisub 3.4.2                                                  3.4.2                  Aegisub Team                      
-Microsoft .NET SDK 8.0.101 (x64) from Visual Studio            8.1.123.58017          Microsoft Corporation             
-NoteGen                                                        0.36.0                 codexu                            
-Microsoft .NET AppHost Pack - 8.0.1 (x64_arm64)                64.4.5793              Microsoft Corporation             
-TaTa                                                           0.0.3                  minority                          
-Microsoft.NET.Sdk.tvOS.Manifest-8.0.100 (x64)                  17.2.8004              Microsoft Corporation             
-Microsoft Windows Desktop Targeting Pack - 8.0.1 (x64)         64.4.5797              Microsoft Corporation             
-Microsoft .NET 8.0 Templates 8.0.101 (x64)                     32.6.64801             Microsoft Corporation             
-Python 3.13.4 Development Libraries (64-bit)                   3.13.4150.0            Python Software Foundation        
-Windows Subsystem for Linux Update                             5.10.16                Microsoft Corporation             
-Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61030  11.0.61030             Microsoft Corporation             
-Microsoft System CLR Types for SQL Server 2019                 15.0.2000.5            Microsoft Corporation             
-Microsoft.NET.Workload.Emscripten.net6.Manifest (x64)          64.4.5649              Microsoft Corporation             
-Microsoft .NET Host FX Resolver - 9.0.8 (x64)                  72.32.37563            Microsoft Corporation             
-Microsoft .NET Runtime - 10.0.10 (x64)                         80.40.55332            Microsoft Corporation             
-vs_minshellx64msi                                              18.9.11915             Microsoft Corporation             
-Microsoft .NET Host - 9.0.8 (x64)                              72.32.37563            Microsoft Corporation             
-vs_minshellinteropx64msi                                       18.9.11915             Microsoft Corporation             
-Python 3.12.10 Add to Path (64-bit)                            3.12.10150.0           Python Software Foundation        
-Python 3.13.4 pip Bootstrap (64-bit)                           3.13.4150.0            Python Software Foundation        
-Application Verifier x64 External Package (OnecoreUAP)         10.1.26100.8249        Microsoft                         
-Python 3.13.4 Test Suite (64-bit)                              3.13.4150.0            Python Software Foundation        
-Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40664     12.0.40664             Microsoft Corporation             
-Application Verifier x64 External Package (DesktopEditions)    10.1.22621.2428        Microsoft                         
-DiskClear 版本 1.2.1                                           1.2.1                  DiskClear                         
-Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.7523 9.0.30729.7523         Microsoft Corporation             
-Microsoft Windows Desktop Runtime - 6.0.36 (x64)               48.144.23186           Microsoft Corporation             
-Reqable version 3.0.38                                         3.0.38                 Reqqable Inc.                     
-Microsoft .NET AppHost Pack - 8.0.1 (x64_x86)                  64.4.5793              Microsoft Corporation             
-Microsoft.NET.Workload.Emscripten.Current.Manifest (x64)       64.4.5649              Microsoft Corporation             
-机械革命电竞控制台 Service                                     4.17.47.13             OEM                               
-Microsoft Visual Studio Installer                              4.9.50.62957           Microsoft Corporation             
-Microsoft Visual C++ 2022 X64 Additional Runtime - 14.51.36247 14.51.36247            Microsoft Corporation             
-夸克网盘                                                       7.1.7.791              广州市动悦信息技术有限公司        
-Python 3.12.10 Tcl/Tk Support (64-bit)                         3.12.10150.0           Python Software Foundation        
-PDFgear 2.1.20                                                 2.1.20                 PDFgear                           
-Windows App Certification Kit Native Components                10.1.26100.8249        Microsoft Corporation             
-PasteMate 版本 1.1.7.1                                         1.1.7.1                MDVSC                             
-Python 3.13.4 Documentation (64-bit)                           3.13.4150.0            Python Software Foundation        
-Update for Windows 10 for x64-based Systems (KB5001716)        8.94.0.0               Microsoft Corporation             
-Microsoft.NET.Workload.Mono.Toolchain.Current.Manifest (x64)   64.4.5765              Microsoft Corporation             
-CodeArts Agent                                                 26.8.300               Huawei Technologies Co., Ltd.     
-Microsoft Windows Desktop Runtime - 9.0.8 (x64)                72.32.37601            Microsoft Corporation             
-Microsoft .NET Host - 10.0.10 (x64)                            80.40.55332            Microsoft Corporation             
-Universal CRT Tools x64                                        10.1.26100.8249        Microsoft Corporation             
-Microsoft .NET AppHost Pack - 8.0.1 (x64)                      64.4.5793              Microsoft Corporation             
-ImageGlass                                                     9.6.1.807              Duong Dieu Phap                   
-Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.51.36247    14.51.36247            Microsoft Corporation             
-Windows SDK DirectX x64 Remote                                 10.1.26100.8249        Microsoft Corporation             
-Dokan Library 2.0.6.1000 (x64)                                 2.0.6.1000             Dokany Project                    
-Microsoft .NET Host FX Resolver - 8.0.1 (x64)                  64.4.5793              Microsoft Corporation             
-Microsoft .NET Toolset 8.0.101 (x64)                           32.6.64801             Microsoft Corporation             
-Python 3.12.10 Core Interpreter (64-bit)                       3.12.10150.0           Python Software Foundation        
-ScreenToGif                                                    2.42.1                 Nicke Manarin                     
-Microsoft Windows Desktop Runtime - 8.0.1 (x64)                64.4.5797              Microsoft Corporation             
-Microsoft .NET Standard Targeting Pack - 2.1.0 (x64)           24.0.28113             Microsoft Corporation             
-Microsoft .NET Host FX Resolver - 6.0.36 (x64)                 48.144.23141           Microsoft Corporation             
-Flix 版本 1.2.2                                                1.2.2                  Flix                              
-Microsoft Visual C++ 2005 Redistributable (x64)                8.0.61186              Microsoft Corporation             
-MeowField_AutoPiano 2.2.22                                     2.2.22                 薮猫                              
-CUBLAS Runtime                                                 11.8                   NVIDIA Corporation                
-CUBLAS Development                                             11.8                   NVIDIA Corporation                
-NVIDIA CUDA Development 11.8                                   11.8                   NVIDIA Corporation                
-NVIDIA CUDA Documentation 11.8                                 11.8                   NVIDIA Corporation                
-CUDART Runtime                                                 11.8                   NVIDIA Corporation                
-NVIDIA CUDA Runtime 11.8                                       11.8                   NVIDIA Corporation                
-CUDA Toolkit                                                   11.8                   NVIDIA Corporation                
-CUDA Profiler API                                              11.8                   NVIDIA Corporation                
-CUDNN Runtime                                                  9.19                   NVIDIA Corporation                
-CUDNN Runtime                                                  9.19                   NVIDIA Corporation                
-CUDNN Development                                              9.19                   NVIDIA Corporation                
-CUDNN Development                                              9.19                   NVIDIA Corporation                
-CUDNN Samples                                                  9.19                   NVIDIA Corporation                
-${{arpDisplayName}}                                            11.8                   NVIDIA Corporation                
-CUFFT Development                                              11.8                   NVIDIA Corporation                
-cuobjdump                                                      11.8                   NVIDIA Corporation                
-CUPTI                                                          11.8                   NVIDIA Corporation                
-CURAND Runtime                                                 11.8                   NVIDIA Corporation                
-CURAND Development                                             11.8                   NVIDIA Corporation                
-CUSOLVER Runtime                                               11.8                   NVIDIA Corporation                
-CUSOLVER Development                                           11.8                   NVIDIA Corporation                
-CUSPARSE Runtime                                               11.8                   NVIDIA Corporation                
-CUSPARSE Development                                           11.8                   NVIDIA Corporation                
-cuxxfilt                                                       11.8                   NVIDIA Corporation                
-Demo Suite                                                     11.8                   NVIDIA Corporation                
-NVIDIA Graphics Driver 591.74                                  591.74                 NVIDIA Corporation                
-                                                                                                                        
-NVIDIA PhysX System Software 9.23.1019                         9.23.1019              NVIDIA Corporation                
-CUDA Documentation                                             11.8                   NVIDIA Corporation                
-NVIDIA FrameView SDK 1.7.12227.37421622                        1.7.12227.37421622     NVIDIA Corporation                
-NVIDIA HD Audio Driver 1.4.5.7                                 1.4.5.7                NVIDIA Corporation                
-NVIDIA Install Application                                     2.1002.463.0           NVIDIA Corporation                
-MEMCHECK                                                       11.8                   NVIDIA Corporation                
-NPP Runtime                                                    11.8                   NVIDIA Corporation                
-NPP Development                                                11.8                   NVIDIA Corporation                
-NVIDIA CUDA Nsight NVTX 11.8                                   11.8                   NVIDIA Corporation                
-nvcc                                                           11.8                   NVIDIA Corporation                
-Disassembler                                                   11.8                   NVIDIA Corporation                
-NVJPEG Runtime                                                 11.8                   NVIDIA Corporation                
-NVJPEG Development                                             11.8                   NVIDIA Corporation                
-NVML Development                                               11.8                   NVIDIA Corporation                
-NVIDIA Platform Controllers and Framework                      590.71                 NVIDIA Corporation                
-CUDA Profiler Tools                                            11.8                   NVIDIA Corporation                
-nvprune                                                        11.8                   NVIDIA Corporation                
-NVRTC Runtime                                                  11.8                   NVIDIA Corporation                
-NVRTC Development                                              11.8                   NVIDIA Corporation                
-NVTX Development                                               11.8                   NVIDIA Corporation                
-Occupancy Calculator                                           11.8                   NVIDIA Corporation                
-Compute Sanitizer                                              11.8                   NVIDIA Corporation                
-CUDA CCCL                                                      11.8                   NVIDIA Corporation                
-Visual Profiler                                                11.8                   NVIDIA Corporation                
-NVIDIA CUDA Visual Studio Integration 11.8                     11.8                   NVIDIA Corporation                
-NVIDIA Tools Extension SDK (NVTX) - 64 bit                     1.00.00.00             NVIDIA Corporation                
-Microsoft.NET.Sdk.Android.Manifest-8.0.100 (x64)               34.0.43                Microsoft Corporation             
-Microsoft.NET.Workload.Emscripten.net7.Manifest (x64)          64.4.5649              Microsoft Corporation             
-MySQL Server 9.3                                               9.3.0                  Oracle Corporation                
-Microsoft.NET.Sdk.MacCatalyst.Manifest-8.0.100 (x64)           17.2.8004              Microsoft Corporation             
-vs_devenx64vmsi                                                18.9.11915             Microsoft Corporation             
-Microsoft.NET.Workload.Mono.Toolchain.net6.Manifest (x64)      64.4.5765              Microsoft Corporation             
-Agent Ransack                                                  9.3.3562.1             Mythicsoft Ltd                    
-Microsoft .NET Runtime - 6.0.36 (x64)                          48.144.23141           Microsoft Corporation             
-Python 3.12.10 pip Bootstrap (64-bit)                          3.12.10150.0           Python Software Foundation        
-Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61030     11.0.61030             Microsoft Corporation             
-vs_communityx64msi                                             18.9.11921             Microsoft Corporation             
-Microsoft .NET Host - 8.0.1 (x64)                              64.4.5793              Microsoft Corporation             
-Eclipse Temurin JDK with Hotspot 17.0.20+8 (x64)               17.0.20.8              Eclipse Adoptium                  
-Python 3.13.4 Add to Path (64-bit)                             3.13.4150.0            Python Software Foundation        
-Microsoft.NET.Workload.Mono.Toolchain.net7.Manifest (x64)      64.4.5765              Microsoft Corporation             
-Zeal                                                           0.9.1                  Oleg Shparber                     
-Microsoft .NET Host - 6.0.36 (x64)                             48.144.23141           Microsoft Corporation             
-Python 3.13.4 Core Interpreter (64-bit)                        3.13.4150.0            Python Software Foundation        
-Microsoft.NET.Sdk.macOS.Manifest-8.0.100 (x64)                 14.2.8004              Microsoft Corporation             
-Cursor                                                         3.13.10                Anysphere                         
-Microsoft .NET Host FX Resolver - 10.0.10 (x64)                80.40.55332            Microsoft Corporation             
-TV                                                             1.1.9                  TV Multiplatform                  
-Python 3.12.10 Standard Library (64-bit)                       3.12.10150.0           Python Software Foundation        
-Lively Wallpaper 版本 2.2.1.0                                  2.2.1.0                rocksdanister                     
-NVIDIA Nsight Compute 2022.3.0                                 22.3.0.0               NVIDIA Corporation                
-NVIDIA Nsight Visual Studio Edition 2022.3.0.22245             22.3.0.22245           NVIDIA Corporation                
-Python 3.13.4 Executables (64-bit)                             3.13.4150.0            Python Software Foundation        
-Python 3.12.10 Development Libraries (64-bit)                  3.12.10150.0           Python Software Foundation        
-Microsoft Windows Desktop Runtime - 10.0.10 (x64)              80.40.55332            Microsoft Corporation             
-Application Verifier x64 External Package (OnecoreUAP)         10.1.22621.2428        Microsoft                         
-VS Script Debugging Common                                     17.0.157.0             Microsoft Corporation             
-Python 3.13.4 Tcl/Tk Support (64-bit)                          3.13.4150.0            Python Software Foundation        
-IntelliTraceProfilerProxy                                      15.0.21225.01          Microsoft Corporation             
-Microsoft .NET Runtime - 9.0.8 (x64)                           72.32.37563            Microsoft Corporation             
-UE4 Prerequisites (x64)                                        1.0.11.0               Epic Games, Inc.                  
-LibreOffice 26.2.4.2                                           26.2.4.2               The Document Foundation           
-calibre 64bit                                                  9.13.0                 Kovid Goyal                       
-OneRecord 1.6.8                                                1.6.8                  ACME                              
-小旺AI截图                                                     1.3.3                  wangscreenshot                    
-墨咕 0.0.8                                                     0.0.8                  墨者科技                          
-                                                                                      Adobe Inc.                        
-Balabolka                                                      2.15.0.917             Ilya Morozov                      
-                                                                                      Adobe Inc.                        
-Fluent Reader 1.2.2                                            1.2.2                  Haoyuan Liu                       
-                                                                                      Adobe Inc.                        
-                                                                                      Adobe Inc.                        
-                                                                                                                        
-                                                                                      Adobe Inc.                        
-                                                                                      Adobe Inc.                        
-                                                                                      Adobe Inc.                        
-                                                                                      Adobe Inc.                        
-CrossDesk                                                      v1.4.2-20260803        CrossDesk                         
-DevEco Studio                                                  243.24978.46.36.611290 Huawei                            
-Visual Studio Community 2026                                   18.9.0                 Microsoft Corporation             
-FormatFactory                                                  5.17.0.0               FreeTime                          
-Google Chrome                                                  152.0.7977.83          Google LLC                        
-IObit Unlocker                                                 1.3.0.11               IObit                             
-                                                               4.0.7                                                    
-                                                                                      Adobe Inc.                        
-KDiff3 (remove only)                                                                                                    
-letsvpn                                                        3.14.2                 Lets                              
-                                                                                      Adobe Inc.                        
-MCHOSE HUB                                                     1.0.21.0               迈从科技有限公司                  
-Microsoft Edge                                                 153.0.4234.32          Microsoft Corporation             
-                                                               1.3.269.9                                                
-Microsoft Edge WebView2 Runtime                                152.0.4191.66          Microsoft Corporation             
-UU加速器                                                       6.13.2.666             网易公司                          
-OBS Studio                                                     31.1.2                 OBS Project                       
-Adobe Photoshop 2020                                           21.1.2                 Adobe Inc.                        
-Potplayer                                                      1.7.23080.0            Kakao Corp.                       
-Adobe Premiere Pro CC 2017                                     11.1.4                 Adobe Inc.                        
-qBittorrent                                                    5.2.2                  The qBittorrent project           
-                                                                                                                        
-Tencent QQMail Plugin                                                                                                   
-                                                                                      Adobe Inc.                        
-Steam                                                          2.10.91.91             Valve Corporation                 
-Watt Toolkit                                                   3.1.2025.0             江苏蒸汽凡星科技有限公司          
-Voicemeeter, The Virtual Mixing Console                                               VB-Audio Software                 
-微信                                                           4.1.12.26              腾讯科技(深圳)有限公司            
-微信输入法                                                     2.1.3.18               腾讯科技(深圳)有限公司            
-                                                                                                                        
-Visual C++ Library CRT Appx Package                            14.38.33130            Microsoft Corporation             
-腾讯QQ                                                         9.7.25.29411           腾讯科技(深圳)有限公司            
-Microsoft Windows Desktop Runtime - 6.0.36 (x64)               6.0.36.34217           Microsoft Corporation             
-Visual C++ Library CRT Desktop Appx Package                    14.38.33130            Microsoft Corporation             
-Windows IoT Extension SDK Contracts                            10.1.22621.2428        Microsoft Corporation             
-vs_tipsmsi                                                     18.9.11915             Microsoft Corporation             
-WinRT Intellisense UAP - en-us                                 10.1.22621.2428        Microsoft Corporation             
-Neat Download Manager version 1.4                              1.4                    Javad Motallebi                   
-Microsoft Visual C++ v14 Redistributable (x64) - 14.51.36247   14.51.36247.0          Microsoft Corporation             
-Windows Mobile Extension SDK Contracts                         10.1.22621.2428        Microsoft Corporation             
-grepWin                                                        2.1.1434               Stefans Tools                     
-vs_CoreEditorFonts                                             17.7.40001             Microsoft Corporation             
-vs_minshellmsires                                              17.8.34205             Microsoft Corporation             
-Visual C++ Library CRT Desktop Appx Package                    14.38.33130            Microsoft Corporation             
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-Windows SDK Modern Non-Versioned Developer Tools               10.1.26100.8249        Microsoft Corporation             
-WinRT Intellisense Desktop - en-us                             10.1.26100.8249        Microsoft Corporation             
-WPTx64 (OnecoreUAP)                                            10.1.22621.2428        Microsoft                         
-Windows Software Development Kit - Windows 10.0.26100.8249     10.1.26100.8249        Microsoft Corporation             
-Universal CRT Redistributable                                  10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40664   12.0.40664.0           Microsoft Corporation             
-ClickOnce Bootstrapper Package for Microsoft .NET Framework    4.8.09037              Microsoft Corporation             
-Visual C++ Library CRT Desktop Appx Package                    14.38.33130            Microsoft Corporation             
-WinRT Intellisense IoT - en-us                                 10.1.26100.8249        Microsoft Corporation             
-Windows Mobile Extension SDK                                   10.1.22621.2428        Microsoft Corporation             
-Windows SDK OnecoreUap Headers x64                             10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Headers x64                                10.1.26100.8249        Microsoft Corporation             
-vs_FileTracker_Singleton                                       18.9.11915             Microsoft Corporation             
-Universal CRT Headers Libraries and Sources                    10.1.26100.8249        Microsoft Corporation             
-Windows SDK for Windows Store Apps Headers                     10.1.26100.8249        Microsoft Corporation             
-vs_minshellsharedmsi                                           18.9.11921             Microsoft Corporation             
-icecap_collection_neutral                                      18.9.11915             Microsoft Corporation             
-Microsoft .NET Runtime - 5.0.17 (x86)                          5.0.17.31213           Microsoft Corporation             
-Windows SDK Desktop Libs arm64                                 10.1.22621.2428        Microsoft Corporation             
-vs_minshellinteropsharedmsi                                    18.9.11915             Microsoft Corporation             
-MSI Development Tools                                          10.1.26100.8249        Microsoft Corporation             
-Windows SDK for Windows Store Apps DirectX x86 Remote          10.1.22621.2428        Microsoft Corporation             
-WinRT Intellisense IoT - en-us                                 10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030   11.0.61030.0           Microsoft Corporation             
-Windows SDK Desktop Headers x64                                10.1.22621.2428        Microsoft Corporation             
-vs_codecoveragemsi                                             18.9.11915             Microsoft Corporation             
-icecap_collection_x64                                          18.9.11915             Microsoft Corporation             
-Windows SDK                                                    10.1.26100.8249        Microsoft Corporation             
-vs_vswebprotocolselectormsires                                 17.8.34129             Microsoft Corporation             
-vs_minshellmsires                                              18.9.11915             Microsoft Corporation             
-Windows SDK Desktop Libs x86                                   10.1.22621.2428        Microsoft Corporation             
-Microsoft .NET Host - 8.0.1 (x86)                              64.4.5793              Microsoft Corporation             
-Windows SDK Modern Versioned Developer Tools                   10.1.26100.8249        Microsoft Corporation             
-Microsoft Windows Desktop Runtime - 9.0.8 (x64)                9.0.8.35118            Microsoft Corporation             
-WinRT Intellisense PPI - Other Languages                       10.1.22621.2428        Microsoft Corporation             
-MountPluginSetup                                               1.0.0                  Digital Life                      
-Visual C++ Library CRT ARM64 Appx Package                      14.38.33130            Microsoft Corporation             
-Universal General MIDI DLS Extension SDK                       10.1.22621.2428        Microsoft Corporation             
-Windows SDK Signing Tools                                      10.1.26100.8249        Microsoft Corporation             
-Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.51.36247    14.51.36247            Microsoft Corporation             
-Windows App Certification Kit x64 (OnecoreUAP)                 10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Headers x86                                10.1.22621.2428        Microsoft Corporation             
-UE4 Prerequisites (x64)                                        1.0.13.0               Epic Games, Inc.                  
-Microsoft Visual Studio Setup Configuration                    4.8.41.48107           Microsoft Corporation             
-Microsoft .NET Runtime - 8.0.1 (x86)                           64.4.5793              Microsoft Corporation             
-MSI Development Tools                                          10.1.22621.2428        Microsoft Corporation             
-WPT Redistributables                                           10.1.22621.2428        Microsoft                         
-WinRT Intellisense UAP - Other Languages                       10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Tools x86                                  10.1.26100.8249        Microsoft Corporation             
-WinRT Intellisense IoT - Other Languages                       10.1.22621.2428        Microsoft Corporation             
-Microsoft .NET Host - 5.0.17 (x86)                             40.68.31213            Microsoft Corporation             
-VBA (2627.01)                                                  6.03.00.9402           Microsoft Corporation             
-VBA (2701.04)                                                  6.03.00.9402           Microsoft Corporation             
-Windows SDK Desktop Headers arm                                10.1.22621.2428        Microsoft Corporation             
-Windows Team Extension SDK Contracts                           10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual C++ 2022 X86 Additional Runtime - 14.51.36247 14.51.36247            Microsoft Corporation             
-Microsoft .NET Runtime - 5.0.17 (x86)                          40.68.31213            Microsoft Corporation             
-WPTx64 (DesktopEditions)                                       10.1.22621.2428        Microsoft                         
-Windows SDK Desktop Headers arm64                              10.1.22621.2428        Microsoft Corporation             
-Windows SDK AddOn                                              10.1.0.0               Microsoft Corporation             
-WinRT Intellisense PPI - en-us                                 10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Headers arm64                              10.1.26100.8249        Microsoft Corporation             
-Windows SDK Signing Tools                                      10.1.22621.2428        Microsoft Corporation             
-WinAppDeploy                                                   10.1.22621.2428        Microsoft Corporation             
-Universal General MIDI DLS Extension SDK                       10.1.26100.8249        Microsoft Corporation             
-Windows Desktop Extension SDK                                  10.1.26100.8249        Microsoft Corporation             
-Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660   12.0.40660.0           Microsoft Corporation             
-Windows SDK Desktop Libs x64                                   10.1.22621.2428        Microsoft Corporation             
-windows_toolscorepkg                                           17.8.34205             Microsoft Corporation             
-vs_githubprotocolhandlermsi                                    18.9.11915             Microsoft Corporation             
-Microsoft .NET Host FX Resolver - 8.0.1 (x86)                  64.4.5793              Microsoft Corporation             
-Windows SDK for Windows Store Apps Headers                     10.1.22621.2428        Microsoft Corporation             
-Windows SDK for Windows Store Apps Libs                        10.1.26100.8249        Microsoft Corporation             
-WinRT Intellisense Mobile - en-us                              10.1.22621.2428        Microsoft Corporation             
-Universal CRT Headers Libraries and Sources                    10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual C++ 2005 Redistributable                      8.0.61187              Microsoft Corporation             
-Windows SDK ARM Desktop Tools                                  10.1.22621.2428        Microsoft Corporation             
-Microsoft NetStandard SDK                                      15.0.51105             Microsoft Corporation             
-WinRT Intellisense Desktop - en-us                             10.1.22621.2428        Microsoft Corporation             
-PxCook                                                         v3.9.960 Beta          FancyNode, Inc.                   
-Windows SDK EULA                                               10.1.22621.2428        Microsoft Corporations            
-vcpp_crt.redist.clickonce                                      14.38.33135            Microsoft Corporation             
-Windows SDK for Windows Store Apps Libs                        10.1.22621.2428        Microsoft Corporation             
-Windows Software Development Kit - Windows 10.0.22621.2428     10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual Studio Setup WMI Provider                     4.8.41.48107           Microsoft Corporation             
-WinRT Intellisense Desktop - Other Languages                   10.1.22621.2428        Microsoft Corporation             
-Windows SDK Modern Versioned Developer Tools                   10.1.22621.2428        Microsoft Corporation             
-Windows SDK Facade Windows WinMD Versioned                     10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Libs x64                                   10.1.26100.8249        Microsoft Corporation             
-小丸工具箱                                                     236                    Maruko Toolbox Project            
-Windows SDK OnecoreUap Headers arm64                           10.1.26100.8249        Microsoft Corporation             
-Microsoft Windows Desktop Targeting Pack - 8.0.1 (x86)         64.4.5797              Microsoft Corporation             
-Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40664     12.0.40664             Microsoft Corporation             
-Windows SDK for Windows Store Apps                             10.1.26100.8249        Microsoft Corporation             
-SDK ARM64 Additions                                            10.1.26100.8249        Microsoft Corporation             
-Microsoft TestPlatform SDK Local Feed                          17.0.0.5175695         Microsoft                         
-Microsoft Windows Desktop Runtime 10.0.10 (x64)                10.0.10.50000          Microsoft Corporation             
-Windows SDK Desktop Libs x86                                   10.1.26100.8249        Microsoft Corporation             
-Universal CRT Extension SDK                                    10.1.26100.8249        Microsoft Corporation             
-Microsoft ASP.NET Core 8.0.1 Shared Framework (x86)            8.0.1.23580            Microsoft Corporation             
-Windows SDK for Windows Store Apps Headers OnecoreUap          10.1.26100.8249        Microsoft Corporation             
-Windows SDK for Windows Store Apps Contracts                   10.1.22621.2428        Microsoft Corporation             
-Python Launcher                                                3.13.4150.0            Python Software Foundation        
-Windows SDK EULA                                               10.1.26100.8249        Microsoft Corporations            
-Windows SDK for Windows Store Apps Tools                       10.1.22621.2428        Microsoft Corporation             
-Windows SDK Desktop Headers x86                                10.1.26100.8249        Microsoft Corporation             
-WinRT Intellisense UAP - en-us                                 10.1.26100.8249        Microsoft Corporation             
-Windows Mobile Extension SDK                                   10.1.26100.8249        Microsoft Corporation             
-Windows SDK for Windows Store Managed Apps Libs                10.1.26100.8249        Microsoft Corporation             
-Microsoft Visual C++ v14 Redistributable (x86) - 14.51.36247   14.51.36247.0          Microsoft Corporation             
-Transmission 4.1.3 (838877323f)                                4.1.3                  Transmission Project              
-Windows SDK Desktop Libs arm                                   10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030   11.0.61030.0           Microsoft Corporation             
-Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.7523 9.0.30729.7523         Microsoft Corporation             
-Microsoft Visual C++ 2022 X86 Debug Runtime - 14.51.36247      14.51.36247            Microsoft Corporation             
-Windows SDK for Windows Store Managed Apps Libs                10.1.22621.2428        Microsoft Corporation             
-Visual C++ Library CRT Appx Package                            14.38.33130            Microsoft Corporation             
-WinFsp 2022+ARM64                                              1.11.22176             Navimatics LLC                    
-WinRT Intellisense PPI - en-us                                 10.1.22621.2428        Microsoft Corporation             
-vs_communitysharedmsi                                          18.9.11921             Microsoft Corporation             
-Windows IoT Extension SDK Contracts                            10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Tools x86                                  10.1.22621.2428        Microsoft Corporation             
-SDK ARM64 Redistributables                                     10.1.26100.8249        Microsoft Corporation             
-Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030   11.0.61030.0           Microsoft Corporation             
-Windows SDK Desktop Tools arm64                                10.1.26100.8249        Microsoft Corporation             
-Windows SDK OnecoreUap Headers x86                             10.1.26100.8249        Microsoft Corporation             
-Windows IoT Extension SDK                                      10.1.26100.8249        Microsoft Corporation             
-Universal CRT Redistributable                                  10.1.26100.8249        Microsoft Corporation             
-Microsoft .NET Host FX Resolver - 5.0.17 (x86)                 40.68.31213            Microsoft Corporation             
-Windows SDK Desktop Tools arm64                                10.1.22621.2428        Microsoft Corporation             
-vs_communitymsires                                             18.9.11915             Microsoft Corporation             
-Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030  11.0.61030             Microsoft Corporation             
-Windows Desktop Extension SDK                                  10.1.22621.2428        Microsoft Corporation             
-WinRT Intellisense Desktop - Other Languages                   10.1.26100.8249        Microsoft Corporation             
-Visual C++ Library CRT Appx Resource Package                   14.38.33130            Microsoft Corporation             
-Windows SDK DirectX x86 Remote                                 10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Libs arm64                                 10.1.26100.8249        Microsoft Corporation             
-Windows Desktop Extension SDK Contracts                        10.1.26100.8249        Microsoft Corporation             
-Microsoft Windows Desktop Runtime - 8.0.1 (x86)                64.4.5797              Microsoft Corporation             
-Windows SDK for Windows Store Apps Contracts                   10.1.26100.8249        Microsoft Corporation             
-Windows Desktop Extension SDK Contracts                        10.1.22621.2428        Microsoft Corporation             
-MS3022D                                                        1.0                                                      
-Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030     11.0.61030             Microsoft Corporation             
-Windows SDK for Windows Store Apps DirectX x86 Remote          10.1.26100.8249        Microsoft Corporation             
-WinRT Intellisense UAP - Other Languages                       10.1.22621.2428        Microsoft Corporation             
-Microsoft .NET Targeting Pack - 8.0.1 (x86)                    64.4.5793              Microsoft Corporation             
-WinRT Intellisense Mobile - en-us                              10.1.26100.8249        Microsoft Corporation             
-Windows App Certification Kit x64                              10.1.26100.8249        Microsoft Corporation             
-Windows Team Extension SDK                                     10.1.22621.2428        Microsoft Corporation             
-Windows SDK for Windows Store Apps Metadata                    10.1.22621.2428        Microsoft Corporation             
-Windows IoT Extension SDK                                      10.1.22621.2428        Microsoft Corporation             
-WinRT Intellisense IoT - Other Languages                       10.1.26100.8249        Microsoft Corporation             
-Windows App Certification Kit SupportedApiList x86             10.1.26100.8249        Microsoft Corporation             
-IntelliTraceProfilerProxy                                      15.0.21225.01          Microsoft Corporation             
-Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030   11.0.61030.0           Microsoft Corporation             
-vs_communitymsires                                             17.8.34205             Microsoft Corporation             
-Windows SDK Desktop Tools x64                                  10.1.26100.8249        Microsoft Corporation             
-Windows SDK Redistributables                                   10.1.26100.8249        Microsoft Corporation             
-vs_filehandler_x86                                             18.9.11921             Microsoft Corporation             
-Windows SDK Facade Windows WinMD Versioned                     10.1.22621.2428        Microsoft Corporation             
-Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40664  12.0.40664             Microsoft Corporation             
-Windows SDK ARM64 Desktop Tools                                10.1.26100.8249        Microsoft Corporation             
-WinAppDeploy                                                   10.1.26100.8249        Microsoft Corporation             
-Windows SDK for Windows Store Apps Tools                       10.1.26100.8249        Microsoft Corporation             
-WinRT Intellisense PPI - Other Languages                       10.1.26100.8249        Microsoft Corporation             
-Universal CRT Extension SDK                                    10.1.22621.2428        Microsoft Corporation             
-Microsoft ASP.NET Core 8.0.1 Targeting Pack (x86)              8.0.1.23580            Microsoft Corporation             
-Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40664   12.0.40664.0           Microsoft Corporation             
-Universal CRT Tools x86                                        10.1.26100.8249        Microsoft Corporation             
-Windows Team Extension SDK Contracts                           10.1.26100.8249        Microsoft Corporation             
-vs_devenvsharedmsi                                             18.9.11915             Microsoft Corporation             
-Kits Configuration Installer                                   10.1.26100.8249        Microsoft                         
-Windows SDK for Windows Store Apps Metadata                    10.1.26100.8249        Microsoft Corporation             
-Windows SDK Desktop Tools x64                                  10.1.22621.2428        Microsoft Corporation             
-Microsoft .NET Native SDK                                      15.0.24211.07          Microsoft Corporation             
-Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40660   12.0.40660.0           Microsoft Corporation             
-Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219    10.0.40219             Microsoft Corporation             
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-Windows Mobile Extension SDK Contracts                         10.1.26100.8249        Microsoft Corporation             
-Clash for Windows 版本 0.20.39                                 0.20.39                Fndroid                           
-vs_vswebprotocolselectormsi                                    18.9.11915             Microsoft Corporation             
-Intel(R) C++ Redistributables on Intel(R) 64                   15.0.179               Intel Corporation                 
-Windows Team Extension SDK                                     10.1.26100.8249        Microsoft Corporation             
-vcpp_crt.redist.clickonce                                      14.51.36247            Microsoft Corporation             
-vs_filehandler_amd64                                           18.9.11921             Microsoft Corporation             
-天翼云盘 6.6.1.0                                               6.6.1.0                天翼数字生活科技有限公司          
-微PE工具箱                                                     2.3                    微PE团队                          
-微信开发者工具 1.06.2412040                                    1.06.2412040           腾讯科技(广州)有限公司            
-                                                                                                                        
-格式工厂                                                       5.22.0.0               Geshi Inc.                        
-百度网盘                                                       6.5.0                  百度在线网络技术（北京）有限公司  
-蓝湖                                                           2.415.0                JWZG                              
-
+CMake                                                          3.29.0                 Kitware
+LocalSend 版本 1.17.0                                          1.17.0                 Tien Do Nam
+Python 3.12.10 Executables (64-bit)                            3.12.10150.0           Python Software Foundation
+Python 3.12.10 Test Suite (64-bit)                             3.12.10150.0           Python Software Foundation
+Python 3.12.10 Documentation (64-bit)                          3.12.10150.0           Python Software Foundation
+Qoder IDE                                                      1.106.3                Qoder
+Python 3.13.4 Standard Library (64-bit)                        3.13.4150.0            Python Software Foundation
+Aegisub 3.4.2                                                  3.4.2                  Aegisub Team
+NoteGen                                                        0.36.0                 codexu
+TaTa                                                           0.0.3                  minority
+Python 3.13.4 Development Libraries (64-bit)                   3.13.4150.0            Python Software Foundation
+Python 3.12.10 Add to Path (64-bit)                            3.12.10150.0           Python Software Foundation
+Python 3.13.4 pip Bootstrap (64-bit)                           3.13.4150.0            Python Software Foundation
+Python 3.13.4 Test Suite (64-bit)                              3.13.4150.0            Python Software Foundation
+DiskClear 版本 1.2.1                                           1.2.1                  DiskClear
+机械革命电竞控制台 Service                                     4.17.47.13             OEM
+夸克网盘                                                       7.1.7.791              广州市动悦信息技术有限公司
+Python 3.12.10 Tcl/Tk Support (64-bit)                         3.12.10150.0           Python Software Foundation
+PDFgear 2.1.20                                                 2.1.20                 PDFgear
+PasteMate 版本 1.1.7.1                                         1.1.7.1                MDVSC
+Python 3.13.4 Documentation (64-bit)                           3.13.4150.0            Python Software Foundation
+CodeArts Agent                                                 26.8.300               Huawei Technologies Co., Ltd.
+ImageGlass                                                     9.6.1.807              Duong Dieu Phap
+Dokan Library 2.0.6.1000 (x64)                                 2.0.6.1000             Dokany Project
+Python 3.12.10 Core Interpreter (64-bit)                       3.12.10150.0           Python Software Foundation
+ScreenToGif                                                    2.42.1                 Nicke Manarin
+Flix 版本 1.2.2                                                1.2.2                  Flix
+MeowField_AutoPiano 2.2.22                                     2.2.22                 薮猫
+Agent Ransack                                                  9.3.3562.1             Mythicsoft Ltd
+Python 3.12.10 pip Bootstrap (64-bit)                          3.12.10150.0           Python Software Foundation
+Eclipse Temurin JDK with Hotspot 17.0.20+8 (x64)               17.0.20.8              Eclipse Adoptium
+Python 3.13.4 Add to Path (64-bit)                             3.13.4150.0            Python Software Foundation
+Zeal                                                           0.9.1                  Oleg Shparber
+Python 3.13.4 Core Interpreter (64-bit)                        3.13.4150.0            Python Software Foundation
+Cursor                                                         3.13.10                Anysphere
+TV                                                             1.1.9                  TV Multiplatform
+Python 3.12.10 Standard Library (64-bit)                       3.12.10150.0           Python Software Foundation
+Lively Wallpaper 版本 2.2.1.0                                  2.2.1.0                rocksdanister
+Python 3.13.4 Executables (64-bit)                             3.13.4150.0            Python Software Foundation
+Python 3.12.10 Development Libraries (64-bit)                  3.12.10150.0           Python Software Foundation
+Python 3.13.4 Tcl/Tk Support (64-bit)                          3.13.4150.0            Python Software Foundation
+LibreOffice 26.2.4.2                                           26.2.4.2               The Document Foundation
+calibre 64bit                                                  9.13.0                 Kovid Goyal
+OneRecord 1.6.8                                                1.6.8                  ACME
+小旺AI截图                                                     1.3.3                  wangscreenshot
+墨咕 0.0.8                                                     0.0.8                  墨者科技
+Balabolka                                                      2.15.0.917             Ilya Morozov
+Fluent Reader 1.2.2                                            1.2.2                  Haoyuan Liu
+CrossDesk                                                      v1.4.2-20260803        CrossDesk
+DevEco Studio                                                  243.24978.46.36.611290 Huawei
+FormatFactory                                                  5.17.0.0               FreeTime
+Google Chrome                                                  152.0.7977.83          Google LLC
+IObit Unlocker                                                 1.3.0.11               IObit
+letsvpn                                                        3.14.2                 Lets
+MCHOSE HUB                                                     1.0.21.0               迈从科技有限公司
+UU加速器                                                       6.13.2.666             网易公司
+OBS Studio                                                     31.1.2                 OBS Project
+Potplayer                                                      1.7.23080.0            Kakao Corp.
+qBittorrent                                                    5.2.2                  The qBittorrent project
+Watt Toolkit                                                   3.1.2025.0             江苏蒸汽凡星科技有限公司
+Voicemeeter, The Virtual Mixing Console                                               VB-Audio Software
+微信                                                           4.1.12.26              腾讯科技(深圳)有限公司
+微信输入法                                                     2.1.3.18               腾讯科技(深圳)有限公司
+腾讯QQ                                                         9.7.25.29411           腾讯科技(深圳)有限公司
+Neat Download Manager version 1.4                              1.4                    Javad Motallebi
+grepWin                                                        2.1.1434               Stefans Tools
+MountPluginSetup                                               1.0.0                  Digital Life
+小丸工具箱                                                     236                    Maruko Toolbox Project
+Python Launcher                                                3.13.4150.0            Python Software Foundation
+Transmission 4.1.3 (838877323f)                                4.1.3                  Transmission Project
+WinFsp 2022+ARM64                                              1.11.22176             Navimatics LLC
+Clash for Windows 版本 0.20.39                                 0.20.39                Fndroid
+天翼云盘 6.6.1.0                                               6.6.1.0                天翼数字生活科技有限公司
+微PE工具箱                                                     2.3                    微PE团队
+微信开发者工具 1.06.2412040                                    1.06.2412040           腾讯科技(广州)有限公司
+百度网盘                                                       6.5.0                  百度在线网络技术（北京）有限公司
+蓝湖                                                           2.415.0                JWZG
