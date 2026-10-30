@@ -1,0 +1,131 @@
+# subtitle-motion · MV 歌词字幕动效
+
+拿一段视频 + 一个 LRC，直接烧出「逐字跟着唱」的动效字幕成片。
+10 种风格，纯 ASS（ffmpeg + libass），不装剪辑软件、不点鼠标、不联网。
+
+```bash
+python render.py --video 片子.mp4 --lrc 歌.lrc --style neon
+```
+
+分辨率不用管：从视频里读出来，字号/位置/描边按比例换算，竖屏横屏 4K 都一样。
+
+## 依赖
+
+- **ffmpeg**（要带 libass，gyan 的 full build 默认带）—— `ffmpeg -version` 看得到 `--enable-libass` 就行
+- **Python 3.8+**，只用标准库
+- 字体看风格需要，见 [fonts/README.md](./fonts/README.md)
+
+## 上手
+
+```bash
+# 竖屏 MV，全片烧 neon
+python render.py --video MV.mp4 --lrc 歌.lrc --style neon --out MV_sub.mp4
+
+# 只做副歌 40–60 秒
+python render.py --video MV.mp4 --lrc 歌.lrc --style slam --from 40 --to 60
+
+# 先截一帧看位置对不对（不编码，1 秒出图）
+python render.py --video MV.mp4 --lrc 歌.lrc --style ink --preview 42
+```
+
+`--preview` 是最好用的调试手段：位置偏了、字号不对、字体没加载，一帧就看得出来，
+不用等整片渲染完。
+
+## 10 种风格
+
+| # | 名字 | 干什么 | 适合 |
+|---|---|---|---|
+| 1 | `neon` | 逐字扫色（卡拉OK）＋冷光晕 | 最稳的跟唱，万金油 |
+| 2 | `slam` | 整行砸入回弹，带轻微倾斜 | 重拍、副歌起手 |
+| 3 | `cine` | 居中大字＋关键词点亮（`--keywords` 指定） | 电影片名质感 |
+| 4 | `fadeup` | 逐字上浮、单字跳一下 | 动态感最强 |
+| 5 | `ink` | 墨色细字、宽字距、极细描边 | **亮调画面的正解**，不抢画面 |
+| 6 | `huge` | 全屏巨字，占满画宽，逐字砸入 | 海报级冲击，短视频封面帧 |
+| 7 | `vtext` | 竖排古风，右起一列，字字落下 | 古风、诗朗诵、片尾 |
+| 8 | `type` | 打字机，逐字硬切 | 叙事、独白 |
+| 9 | `blur` | 从糊到清，镜头对焦 | 前奏、慢歌 |
+| 10 | `mirror` | 字下一层倒影 | 只在暗背景成立，水面/地板/舞台 |
+
+选风格不用一个个烧片：`preview.py` 一次并排出来（见下）。
+
+## 挑风格
+
+```bash
+# 一张静帧拼图，几秒出图
+python preview.py --video 片子.mp4 --lrc 歌.lrc --at 42 --styles all --cols 5
+
+# 一条对比片，带声音，每种风格 4 秒
+python preview.py --video 片子.mp4 --lrc 歌.lrc --at 42 --styles neon,slam,cine --mode video
+```
+
+`--at` 填歌词行开始的时间就行，脚本会自动把取帧点往后推 0.9 秒——
+直接截在歌词刚出现那一帧会撞上淡入（alpha 还是全透明），出来是空的，容易被误判成渲染失败。
+
+## render.py 参数
+
+| 参数 | 作用 |
+|---|---|
+| `--style` | 风格名，默认 `neon` |
+| `--from / --to` | 只做某一段（秒），按**原曲时间**填 |
+| `--offset 40` | 视频第 0 秒＝原曲第几秒。整片不用填；**视频是从原曲中途剪出来的片段时必须填**，否则字幕整体错位 |
+| `--keywords 离开,再见` | `cine` 要点亮的词 |
+| `--dim 0.07` | 压暗，亮画面加白字时用 |
+| `--sat 1.14` | 饱和度倍数，常和 `--dim` 一起用 |
+| `--preview 42.6` | 只出这一秒的 PNG，不编码 |
+| `--crf 19` | 画质，越小越好越大越慢 |
+| `--keep-ass` | 留下生成的 ASS，方便手改 |
+
+## 只要 ASS
+
+拿去 Aegisub 里微调、或者别的流程自己烧：
+
+```bash
+python karaoke.py --lrc 歌.lrc --video 片子.mp4 --style all --outdir out/
+python karaoke.py --lrc 歌.lrc --size 1920x1080 --style neon,huge --keywords 离开,再见
+```
+
+输出 `_style_<名字>.ass`。`--video` 自动探测分辨率（含旋转元数据），`--size` 手动指定。
+
+## 毛笔线（可选）
+
+书法字体在 libass 上经常加载不出来（fontconfig 坏了、字体没有 hinting 表），
+`brush.py` / `brush_render.py` 换了条路：**用 fontTools 把字形轮廓抽成 ASS 矢量绘图 `\p1`**，
+完全绕开字体查找，任何 TTF 都能用。
+
+```bash
+python brush.py                        # 只测轮廓提取
+python brush_render.py --lrc 歌.lrc --from 40 --to 52
+```
+
+代价是失去 `\k` 标签，逐字染色改成每个字一个独立事件。
+缩放、透明度、blur、描边、旋转这些动画标签都还能用。
+
+## 原理，和几个非踩不可的坑
+
+1. **`\kf` 是卡拉OK染色的本体**。`SecondaryColour` 是没唱的色，`PrimaryColour` 是唱过的色，
+   `\kf` 让颜色按厘秒扫过去。
+2. **`\1c` 是累积标签**，写了会一直对后面所有字生效。每个字前面必须显式重置，
+   否则一个关键词亮了，后面整句都跟着变色。
+3. **`\pos` 和 `\move` 不能并存**。intro 里已经有 `\move` 时再加 `\pos`，位置会互相打架。
+4. **ASS 颜色是 `&HBBGGRR`**，不是 RGB。写反了不会报错，只会出现诡异的偏色。
+5. **ffmpeg 的 `-ss` 放在 `-i` 前面会把 pts 归零**。要截"第 42 秒那一帧"，
+   得先用输入 seek 跳到片段起点，再用输出 seek 跳到目标帧，两个配合。
+   少一个就会截到第 0 帧，然后误以为字幕没渲染出来。
+6. **Windows 路径里的冒号会破坏 `ass=filename=` 的滤镜语法**。这里的做法是
+   `cwd` 切到临时目录、用相对文件名 `p.ass`，一劳永逸。
+7. **中文全角字宽≈字号**，所以逐字定位可以直接按 `size + spacing` 累加算 X，
+   不用做真正的文字排版。
+
+更细的标签用法、观感描述、没做但能做的 12 种效果，见 [字幕动效清单.md](./字幕动效清单.md)。
+
+## 文件
+
+| 文件 | 作用 |
+|---|---|
+| `render.py` | 一条命令出成片（推荐入口） |
+| `karaoke.py` | 引擎，10 种风格的定义都在这里 |
+| `preview.py` | 多风格拼图 / 对比片 |
+| `brush.py` | TTF 字形 → ASS 矢量路径 |
+| `brush_render.py` | 毛笔巨字整片渲染（备用线） |
+| `字幕动效清单.md` | 风格细节、技术约束、可行性清单 |
+| `examples/demo.lrc` | 随便拿段视频就能试的示例歌词 |

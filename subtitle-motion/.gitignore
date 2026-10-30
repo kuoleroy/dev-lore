@@ -1,0 +1,13 @@
+# 运行时产物
+__pycache__/
+*.pyc
+_style_*.ass
+_brush-*.ass
+preview_grid.png
+preview_compare.mp4
+preview.png
+
+# 字体不进仓库（体积 + 授权），见 fonts/README.md
+fonts/*.ttf
+fonts/*.otf
+fonts/*.ttc
