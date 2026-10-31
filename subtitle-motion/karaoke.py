@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""炫酷 MV 字幕引擎 —— 从行级 LRC 生成逐字动效 ASS（11 种风格）
+"""炫酷 MV 字幕引擎 —— 从行级 LRC 生成逐字动效 ASS（12 种风格）
 
 用法:
     python karaoke.py --lrc 歌词.lrc --style all                # 全部风格，竖屏
     python karaoke.py --lrc 歌词.lrc --video 片子.mp4 --style neon
     python karaoke.py --lrc 歌词.lrc --size 1920x1080 --style neon,huge
 
-十一种风格
+十二种风格
     neon    逐字扫色（卡拉OK）＋冷光晕，最稳的"跟唱"效果
     slam    整行砸入回弹，重拍冲击
     cine    居中大字＋关键词点亮（--keywords 指定），电影片名质感
@@ -18,6 +18,7 @@
     blur    从糊到清，镜头对焦感
     mirror  倒影，字落在玻璃/水面上
     grid    表格式：多行累积下叠、当前句整行变红（楷体，不扫色）
+    grid-industrial  同机制的工业版：粗黑体、左对齐、警示橙当前句、左侧竖条
 
 技术要点
   · 染色用 \\kf（卡拉OK sweep），SecondaryColour=未唱 / PrimaryColour=已唱
@@ -317,7 +318,7 @@ STYLES = {
     # ---------- 11 表格式：多行累积下叠，两列对仗 ----------
     # 不做逐字扫色，靠"逐行出现、已出现的留在上方"制造推进感。
     # 列用 "|" 或连续空格分隔，左列右对齐到中缝、右列左对齐，形成表格般的竖线。
-    "grid": dict(
+     "grid": dict(
         font="KaiTi", size=60, bold=0, spacing=9,
         y=640, an=5,
         sung="&H00F0EDE8", unsung="&H0080868C",
@@ -326,6 +327,20 @@ STYLES = {
         intro="", speed=3.2,
         grid=True, rows_per_page=6, row_gap=104,
         now_color="&H003C6AE8",   # 当前句：橙红，唱完退回米白
+    ),
+
+    # 工业版：借 grid 的机制，换掉书卷气。
+    # 楷体→粗黑体、米白→冷灰白、橙红→警示橙、居中→左对齐贴边 + 左侧竖条。
+     "grid-industrial": dict(
+        font="Microsoft YaHei", size=54, bold=-1, spacing=1,
+        y=430, an=4, x=104,
+        sung="&H00BEC0C3", unsung="&H007C7C7C",
+        outline="&H00101010", border=0, shadow=0,
+        glow_color=None, glow_blur=0, glow_border=0,
+        intro="", speed=3.2,
+        grid=True, rows_per_page=7, row_gap=92,
+        now_color="&H00008CFF",   # 当前句：警示橙 RGB(255,140,0)
+        align="left", rule=True, rule_color="&H00008CFF",
     ),
 }
 
@@ -357,16 +372,24 @@ def header(cfg):
 
 
 def build_grid(cfg, lines, shift):
-    """表格式：逐行往下堆、当前句整行变红、唱完退回米白常驻。
+    """表格式：逐行往下堆、当前句整行变色、唱完退回常驻色。
 
     每行整体居中（行内 "|" 或连续空格只是句中停顿，转成全角空格），
     不做左右两列定位——参考范本里行宽不等、中缝其实是行内空格。
     事件两层：白层从本行出现挂到本页结束；红层只盖住"正在唱"的时间段。
+
+    align="left" 时改成左对齐贴边（工业版），并可画一条左侧竖条。
     """
     size, sp = cfg["size"], cfg["spacing"]
     rowh = cfg["row_gap"] * SCALE
     per = cfg["rows_per_page"]
-    cx = W / 2.0
+    left = cfg.get("align") == "left"
+    if left:
+        x = cfg.get("x", 104) * W / 1080.0
+        an = 4          # 左中对齐
+    else:
+        x = W / 2.0
+        an = 5          # 居中
     y0 = cfg["y"]
     sung, now = cfg["sung"], cfg["now_color"]
 
@@ -379,24 +402,41 @@ def build_grid(cfg, lines, shift):
     ev = []
     pages = [lines[i:i + per] for i in range(0, len(lines), per)]
     for pi, page in enumerate(pages):
-        page_end = pages[pi + 1][0] - 0.15 if pi + 1 < len(pages) else total_end
+        page_end = pages[pi + 1][0][0] - 0.15 if pi + 1 < len(pages) else total_end
+
+        # 左侧竖条：随唱到的行数逐段生长（每行一段，接起来是连续的）
+        if cfg.get("rule"):
+            bar_w = W * 0.005
+            gap = W * 0.026
+            bx = x - gap
+            for ri, (t, _txt) in enumerate(page):
+                yy = y0 + ri * rowh
+                seg_a = yy - 10 * SCALE
+                seg_h = rowh - 6 * SCALE
+                ev.append(
+                    "Dialogue: 2,%s,%s,K,,0,0,0,,"
+                    "{\\an7\\pos(%.1f,%.1f)\\p1\\c%s&\\bord0\\shad0\\1a&H24&}"
+                    "m 0 0 l %.1f 0 l %.1f %.1f l 0 %.1f"
+                    % (ts(t - shift), ts(page_end - shift), bx, seg_a,
+                       cfg.get("rule_color", now), bar_w, bar_w, seg_h, seg_h))
+
         for ri, (t, text) in enumerate(page):
             y = int(y0 + ri * rowh)
             a, b = ts(t - shift), ts(page_end - shift)
             is_last = (pi + 1 == len(pages) and ri == len(page) - 1)
             fad = "\\fad(520,700)" if is_last else "\\fad(520,0)"
-            ev.append("Dialogue: 3,%s,%s,K,,0,0,0,,{\\an5\\pos(%.1f,%d)%s}%s"
-                      % (a, b, cx, y, fad, disp(text)))
+            ev.append("Dialogue: 3,%s,%s,K,,0,0,0,,{\\an%d\\pos(%.1f,%d)%s}%s"
+                      % (a, b, an, x, y, fad, disp(text)))
             # 高亮层：本行开始 → 下一行开始
             if ri + 1 < len(page):
                 nxt = page[ri + 1][0]
             elif pi + 1 < len(pages):
-                nxt = pages[pi + 1][0]
+                nxt = pages[pi + 1][0][0]
             else:
                 nxt = page_end
             if nxt > t:
-                ev.append("Dialogue: 4,%s,%s,K,,0,0,0,,{\\an5\\pos(%.1f,%d)\\1c%s\\fad(420,320)}%s"
-                          % (ts(t - shift), ts(nxt - shift), cx, y, now, disp(text)))
+                ev.append("Dialogue: 4,%s,%s,K,,0,0,0,,{\\an%d\\pos(%.1f,%d)\\1c%s\\fad(420,320)}%s"
+                          % (ts(t - shift), ts(nxt - shift), an, x, y, now, disp(text)))
     return ev
 
 

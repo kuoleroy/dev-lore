@@ -1,7 +1,7 @@
 # subtitle-motion · MV 歌词字幕动效
 
 拿一段视频 + 一个 LRC，直接烧出「逐字跟着唱」的动效字幕成片。
-11 种风格，纯 ASS（ffmpeg + libass），不装剪辑软件、不点鼠标、不联网。
+12 种风格，纯 ASS（ffmpeg + libass），不装剪辑软件、不点鼠标、不联网。
 
 ```bash
 python render.py --video 片子.mp4 --lrc 歌.lrc --style neon
@@ -49,7 +49,7 @@ python render.py --video MV.mp4 --lrc 歌.lrc --style ink --preview 42
 
 歌词正文以 **.txt 为准**（自己校准过的），时间轴用平台的 LRC，两边对不上就以 txt 为准。
 
-## 11 种风格
+## 12 种风格
 
 | # | 名字 | 干什么 | 适合 |
 |---|---|---|---|
@@ -64,6 +64,7 @@ python render.py --video MV.mp4 --lrc 歌.lrc --style ink --preview 42
 | 9 | `blur` | 从糊到清，镜头对焦 | 前奏、慢歌 |
 | 10 | `mirror` | 字下一层倒影 | 只在暗背景成立，水面/地板/舞台 |
 | 11 | `grid` | 多行累积下叠，当前句整行变红，楷体 | 古风/文言、歌词本、EP 大字报 |
+| 12 | `grid-industrial` | 同上但换皮：粗黑体、左对齐贴边、警示橙当前句、左侧竖条随行生长 | 工业/摇滚/机器、厂牌感 MV |
 
 ### `grid` 的行语法
 
@@ -158,7 +159,7 @@ python brush_render.py --lrc 歌.lrc --from 40 --to 52
 | 文件 | 作用 |
 |---|---|
 | `render.py` | 一条命令出成片（推荐入口） |
-| `karaoke.py` | 引擎，11 种风格的定义都在这里 |
+| `karaoke.py` | 引擎，12 种风格的定义都在这里 |
 | `preview.py` | 多风格拼图 / 对比片 |
 | `brush.py` | TTF 字形 → ASS 矢量路径 |
 | `brush_render.py` | 毛笔巨字整片渲染（备用线） |
