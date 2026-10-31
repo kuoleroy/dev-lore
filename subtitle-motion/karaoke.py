@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""炫酷 MV 字幕引擎 —— 从行级 LRC 生成逐字动效 ASS（10 种风格）
+"""炫酷 MV 字幕引擎 —— 从行级 LRC 生成逐字动效 ASS（11 种风格）
 
 用法:
     python karaoke.py --lrc 歌词.lrc --style all                # 全部风格，竖屏
     python karaoke.py --lrc 歌词.lrc --video 片子.mp4 --style neon
     python karaoke.py --lrc 歌词.lrc --size 1920x1080 --style neon,huge
 
-十种风格
+十一种风格
     neon    逐字扫色（卡拉OK）＋冷光晕，最稳的"跟唱"效果
     slam    整行砸入回弹，重拍冲击
     cine    居中大字＋关键词点亮（--keywords 指定），电影片名质感
@@ -17,6 +17,7 @@
     type    打字机，逐字硬切
     blur    从糊到清，镜头对焦感
     mirror  倒影，字落在玻璃/水面上
+    grid    表格式：多行累积下叠、当前句整行变红（楷体，不扫色）
 
 技术要点
   · 染色用 \\kf（卡拉OK sweep），SecondaryColour=未唱 / PrimaryColour=已唱
@@ -111,19 +112,69 @@ def is_wide(ch):
     return ord(ch) > 0x2000
 
 
+TIME_RE = re.compile(r"\[(\d+):(\d{1,2})(?:[.:](\d{1,3}))?\]")
+META_RE = re.compile(
+    r"^\[(ti|ar|al|by|au|offset|length|re|ve|tool|encoding|kana)\s*:.*\]\s*$", re.I)
+SKIP_RE = re.compile(
+    r"^(作词|作曲|编曲|制作|演唱|混音|母带|出品|监制|和声|录音|后期|题词|策划|文案)")
+
+
 def parse_lrc(path):
+    """读行级 LRC。兼容音乐平台导出的各种花式写法：
+      - 元数据标签 [ti:] [ar:] [offset:+500]（offset 会真的作用到时间上）
+      - 一行多个时间戳 [00:12.34][00:45.67]歌词 → 拆成两条
+      - [mm:ss] 没有小数、[mm:ss.xx]、用冒号当小数点 [mm:ss:xx]
+      - 增强 LRC 的逐字标签 <00:12.34> 直接丢掉
+    """
     out = []
+    offset = 0.0
     for ln in open(path, encoding="utf-8-sig"):
-        m = re.match(r"\[(\d+):(\d+\.\d+)\](.*)", ln.strip())
-        if not m:
+        s = ln.strip()
+        if not s:
             continue
-        t = int(m.group(1)) * 60 + float(m.group(2))
-        txt = m.group(3).strip()
+
+        m = META_RE.match(s)
+        if m:
+            if m.group(1).lower() == "offset":
+                try:
+                    offset = int(s.split(":", 1)[1].strip().rstrip("]")) / 1000.0
+                except Exception:
+                    offset = 0.0
+            continue
+
+        # 行首可能有多个时间标签
+        times = []
+        pos = 0
+        while True:
+            mt = TIME_RE.match(s, pos)
+            if not mt:
+                break
+            mm = int(mt.group(1))
+            ss = int(mt.group(2))
+            frac = mt.group(3)
+            if frac is None:
+                t = mm * 60 + ss
+            elif len(frac) == 1:
+                t = mm * 60 + ss + int(frac) * 0.1
+            elif len(frac) == 2:
+                t = mm * 60 + ss + int(frac) * 0.01
+            else:
+                t = mm * 60 + ss + int(frac) / 1000.0
+            times.append(t)
+            pos = mt.end()
+        if not times:
+            continue
+
+        txt = s[pos:].strip()
+        txt = re.sub(r"<\d+:\d+(?:[.:]\d+)?>", "", txt).strip()   # 去掉逐字标签
         if not txt:
             continue
-        if re.match(r"^(作词|作曲|编曲|制作|演唱|混音|母带|出品)", txt):
+        if SKIP_RE.match(txt):
             continue
-        out.append((t, txt))
+        for t in times:
+            out.append((max(0.0, t + offset), txt))
+
+    out.sort(key=lambda x: x[0])
     return out
 
 
@@ -263,6 +314,19 @@ STYLES = {
         glow_color=None, glow_blur=0, glow_border=0,
         intro="", speed=3.0, alt="mirror",
     ),
+    # ---------- 11 表格式：多行累积下叠，两列对仗 ----------
+    # 不做逐字扫色，靠"逐行出现、已出现的留在上方"制造推进感。
+    # 列用 "|" 或连续空格分隔，左列右对齐到中缝、右列左对齐，形成表格般的竖线。
+    "grid": dict(
+        font="KaiTi", size=60, bold=0, spacing=9,
+        y=640, an=5,
+        sung="&H00F0EDE8", unsung="&H0080868C",
+        outline="&H00000000", border=0, shadow=0,
+        glow_color=None, glow_blur=0, glow_border=0,
+        intro="", speed=3.2,
+        grid=True, rows_per_page=6, row_gap=104,
+        now_color="&H003C6AE8",   # 当前句：橙红，唱完退回米白
+    ),
 }
 
 
@@ -292,6 +356,50 @@ def header(cfg):
     return "\n".join(base)
 
 
+def build_grid(cfg, lines, shift):
+    """表格式：逐行往下堆、当前句整行变红、唱完退回米白常驻。
+
+    每行整体居中（行内 "|" 或连续空格只是句中停顿，转成全角空格），
+    不做左右两列定位——参考范本里行宽不等、中缝其实是行内空格。
+    事件两层：白层从本行出现挂到本页结束；红层只盖住"正在唱"的时间段。
+    """
+    size, sp = cfg["size"], cfg["spacing"]
+    rowh = cfg["row_gap"] * SCALE
+    per = cfg["rows_per_page"]
+    cx = W / 2.0
+    y0 = cfg["y"]
+    sung, now = cfg["sung"], cfg["now_color"]
+
+    def disp(t):
+        return t.replace("|", "\u3000") if "|" in t else re.sub(r"\s{2,}|\t+", "\u3000", t)
+
+    last_t, last_s = lines[-1]
+    total_end = last_t + max(3.0, len(last_s) / cfg["speed"] + 2.0)
+
+    ev = []
+    pages = [lines[i:i + per] for i in range(0, len(lines), per)]
+    for pi, page in enumerate(pages):
+        page_end = pages[pi + 1][0] - 0.15 if pi + 1 < len(pages) else total_end
+        for ri, (t, text) in enumerate(page):
+            y = int(y0 + ri * rowh)
+            a, b = ts(t - shift), ts(page_end - shift)
+            is_last = (pi + 1 == len(pages) and ri == len(page) - 1)
+            fad = "\\fad(520,700)" if is_last else "\\fad(520,0)"
+            ev.append("Dialogue: 3,%s,%s,K,,0,0,0,,{\\an5\\pos(%.1f,%d)%s}%s"
+                      % (a, b, cx, y, fad, disp(text)))
+            # 高亮层：本行开始 → 下一行开始
+            if ri + 1 < len(page):
+                nxt = page[ri + 1][0]
+            elif pi + 1 < len(pages):
+                nxt = pages[pi + 1][0]
+            else:
+                nxt = page_end
+            if nxt > t:
+                ev.append("Dialogue: 4,%s,%s,K,,0,0,0,,{\\an5\\pos(%.1f,%d)\\1c%s\\fad(420,320)}%s"
+                          % (ts(t - shift), ts(nxt - shift), cx, y, now, disp(text)))
+    return ev
+
+
 def build(style_name, lrc, t_from=None, t_to=None, shift=None, out=None,
           keywords=None):
     """生成某一个风格的 ASS。keywords 只对 cine 有效，用于点亮关键词。"""
@@ -309,28 +417,31 @@ def build(style_name, lrc, t_from=None, t_to=None, shift=None, out=None,
 
     ev = []
     n = len(lines)
-    for i, (st, text) in enumerate(lines):
-        nxt = lines[i + 1][0] if i + 1 < n else st + 7.0
-        est = len(text) / cfg["speed"]
-        dur = min(est * 1.10, max(nxt - st - 0.10, est * 0.55))
-        if dur < 0.8:
-            dur = min(est, max(nxt - st, 0.8))
-        dur_cs = int(round(dur * 100))
+    if cfg.get("grid"):
+        ev = build_grid(cfg, lines, shift)
+    else:
+        for i, (st, text) in enumerate(lines):
+            nxt = lines[i + 1][0] if i + 1 < n else st + 7.0
+            est = len(text) / cfg["speed"]
+            dur = min(est * 1.10, max(nxt - st - 0.10, est * 0.55))
+            if dur < 0.8:
+                dur = min(est, max(nxt - st, 0.8))
+            dur_cs = int(round(dur * 100))
 
-        show_end = min(nxt + 0.12, st + dur + 1.6)
-        if i + 1 >= n:
-            show_end = st + dur + 2.2
+            show_end = min(nxt + 0.12, st + dur + 1.6)
+            if i + 1 >= n:
+                show_end = st + dur + 2.2
 
-        a, b = ts(st - shift), ts(show_end - shift)
+            a, b = ts(st - shift), ts(show_end - shift)
 
-        if cfg.get("huge"):
-            ev += build_huge(cfg, text, st - shift, show_end - shift, dur_cs)
-        elif cfg.get("alt"):
-            ev += build_alt(cfg, text, st - shift, show_end - shift, dur_cs)
-        elif cfg.get("per_char"):
-            ev += build_per_char(cfg, text, st - shift, show_end - shift, dur_cs)
-        else:
-            ev += build_karaoke(cfg, text, a, b, dur_cs)
+            if cfg.get("huge"):
+                ev += build_huge(cfg, text, st - shift, show_end - shift, dur_cs)
+            elif cfg.get("alt"):
+                ev += build_alt(cfg, text, st - shift, show_end - shift, dur_cs)
+            elif cfg.get("per_char"):
+                ev += build_per_char(cfg, text, st - shift, show_end - shift, dur_cs)
+            else:
+                ev += build_karaoke(cfg, text, a, b, dur_cs)
 
     content = header(cfg) + "\n" + "\n".join(ev) + "\n"
     out = out or os.path.join(HERE, "_style_%s.ass" % style_name)
